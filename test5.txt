@@ -1,7 +1,7 @@
-// Function with a Real and Character Variables and Literals
+// Function with Arithmetic Expression using Real Literals
+//     and Hexadecimal Integer Literals
 
-function main returns character;
-    a: real is 7.8e-1;
+function main returns real;
 begin
-    when a < .45, '\n' : 'A';
+    .83e+2 + 2.5E-1 + (4.3E2 + #aF2) * .01;
 end;

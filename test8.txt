@@ -1,8 +1,6 @@
-// Multiple Integer Variable Initializations
+// Test Logical and Relational Operators
 
 function main returns integer;
-    b: integer is 5 + 1 - 4;
-    c: integer is 2 + 3;
 begin
-    b + 1 - c;
+    when !(6 <> 7) & 5 + 4 >= 9 | 6 = 5,  6 + 9 * 3 : 8 - 2 ^ 3;
 end;

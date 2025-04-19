@@ -1,7 +1,13 @@
-// Two Parameter Declarations
+-- Multiple Variable Initializations
 
-function main a: integer, b: real returns real;
-    c: real is .7;
+function main returns character;
+    b: integer is 5 + 1 - 4;
+    c: real is 2 + 3.7;
+    d: character is 'A';
 begin
-    a + b * c;
+    if b + 1 - c > 0 then
+        d;
+    else
+        '\n';
+    endif;
 end;

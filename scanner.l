@@ -16,27 +16,27 @@ using namespace std;
 "//".*                          { /* Ignore comments */ }
 \n                              { nextLine(); }
 
-"~"     { return NOTOP; }
-"+"     { return ADDOP; }
-"-"     { return SUBOP; }
-"*"     { return MULOP; }
-"/"     { return DIVOP; }
-"%"     { return MODOP; }
-"^"     { return EXPOP; }
-"!"     { return NOTOP; }
-"&"     { return ANDOP; }
-"|"     { return OROP; }
-"="     { return RELOP; }
-">="    { return GTE; }
-"<="    { return LTE; }
-"<>"    { return NEQ; }
-"<"     { return RELOP; }
-">"     { return RELOP; }
-":"     { return ':'; }
-";"     { return ';'; }
-","     { return ','; }
-"("     { return '('; }
-")"     { return ')'; }
+"~"                             { return NOTOP; }
+"+"                             { return ADDOP; }
+"-"                             { return SUBOP; }
+"*"                             { return MULOP; }
+"/"                             { return DIVOP; }
+"%"                             { return MODOP; }
+"^"                             { return EXPOP; }
+"!"                             { return NOTOP; }         // Alias for logical NOT
+"&"                             { return ANDOP; }
+"|"                             { return OROP; }
+"="                             { return ASSIGNOP; }
+">="                            { return GTE; }
+"<="                            { return LTE; }
+"<>"                            { return NEQ; }
+"<"                             { return RELOP; }
+">"                             { return RELOP; }
+":"                             { return ':'; }
+";"                             { return ';'; }
+","                             { return ','; }
+"("                             { return '('; }
+")"                             { return ')'; }
 
 "begin"                         { return BEGIN_; }
 "case"                          { return CASE; }
@@ -67,9 +67,11 @@ using namespace std;
 \.[0-9]+([eE][-+]?[0-9]+)?       { return REAL_LITERAL; }
 [0-9]+[eE][-+]?[0-9]+            { return REAL_LITERAL; }
 
-[0-9]+                           { return INT_LITERAL; }
-\'([^\\'\n]|\\[nrt0\\'\"])\'      { return CHAR_LITERAL; }
-[A-Za-z][A-Za-z0-9]*             { return IDENTIFIER; }
+"#"[0-9A-Fa-f]+                 { return HEX_LITERAL; }
+
+\'([^\\'\n]|\\[nrt0\\'\"])\'    { return CHAR_LITERAL; }
+
+[A-Za-z][A-Za-z0-9]*            { return IDENTIFIER; }
 
 . {
     printf("Lexical Error: Invalid Character '%c'\n", yytext[0]);

@@ -1,6 +1,6 @@
-// Arithmetic Operators
+// Single Parameter Declaration
 
-function main returns integer;
+function main a: real returns real;
 begin
-    9 + ~2 - (5 - 1) / 2 % 3 * 3 ^ 1 ^ 2;
+    a + 1.5;
 end;

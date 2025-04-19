@@ -877,47 +877,47 @@ YY_RULE_SETUP
 case 9:
 YY_RULE_SETUP
 #line 24 "scanner.l"
-{ return MODOP; }            // NEW: Modulus operator
+{ return MODOP; }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
 #line 25 "scanner.l"
-{ return EXPOP; }            // NEW: Exponentiation operator
+{ return EXPOP; }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
 #line 26 "scanner.l"
-{ return NOTOP; }            // NEW: Logical NOT (already existed but now confirmed needed)
+{ return NOTOP; }         // Alias for logical NOT
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
 #line 27 "scanner.l"
-{ return ANDOP; }            // NEW: Logical AND operator
+{ return ANDOP; }
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
 #line 28 "scanner.l"
-{ return OROP; }             // NEW: Logical OR operator
+{ return OROP; }
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
 #line 29 "scanner.l"
-{ return RELOP; }
+{ return ASSIGNOP; }
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
 #line 30 "scanner.l"
-{ return GTE; }              // NEW: Greater-than-or-equal
+{ return GTE; }
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
 #line 31 "scanner.l"
-{ return LTE; }              // NEW: Less-than-or-equal
+{ return LTE; }
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
 #line 32 "scanner.l"
-{ return NEQ; }              // NEW: Not equal
+{ return NEQ; }
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
@@ -1032,47 +1032,47 @@ YY_RULE_SETUP
 case 40:
 YY_RULE_SETUP
 #line 56 "scanner.l"
-{ return IF; }               // NEW: if-then-else block support
+{ return IF; }
 	YY_BREAK
 case 41:
 YY_RULE_SETUP
 #line 57 "scanner.l"
-{ return THEN; }             // NEW
+{ return THEN; }
 	YY_BREAK
 case 42:
 YY_RULE_SETUP
 #line 58 "scanner.l"
-{ return ELSIF; }            // NEW
+{ return ELSIF; }
 	YY_BREAK
 case 43:
 YY_RULE_SETUP
 #line 59 "scanner.l"
-{ return ELSE; }             // NEW
+{ return ELSE; }
 	YY_BREAK
 case 44:
 YY_RULE_SETUP
 #line 60 "scanner.l"
-{ return ENDIF; }            // NEW
+{ return ENDIF; }
 	YY_BREAK
 case 45:
 YY_RULE_SETUP
 #line 61 "scanner.l"
-{ return LEFT; }             // NEW: fold direction
+{ return LEFT; }
 	YY_BREAK
 case 46:
 YY_RULE_SETUP
 #line 62 "scanner.l"
-{ return RIGHT; }            // NEW
+{ return RIGHT; }
 	YY_BREAK
 case 47:
 YY_RULE_SETUP
 #line 63 "scanner.l"
-{ return FOLD; }             // NEW
+{ return FOLD; }
 	YY_BREAK
 case 48:
 YY_RULE_SETUP
 #line 64 "scanner.l"
-{ return ENDFOLD; }          // NEW
+{ return ENDFOLD; }
 	YY_BREAK
 case 49:
 YY_RULE_SETUP
@@ -1092,12 +1092,12 @@ YY_RULE_SETUP
 case 52:
 YY_RULE_SETUP
 #line 70 "scanner.l"
-{ return HEX_LITERAL; }      // NEW: Hexadecimal literal (e.g., #AF2)
+{ return HEX_LITERAL; }
 	YY_BREAK
 case 53:
 YY_RULE_SETUP
 #line 72 "scanner.l"
-{ return CHAR_LITERAL; }     // UPDATED: Character literals with escape support
+{ return CHAR_LITERAL; }
 	YY_BREAK
 case 54:
 YY_RULE_SETUP
